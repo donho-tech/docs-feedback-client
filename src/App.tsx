@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import {Col, Container, Row} from "react-bootstrap";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faBars} from "@fortawesome/free-solid-svg-icons";
 
 type Rating = {
     helpful: boolean;
@@ -37,6 +39,11 @@ function App() {
 
     return (
         <Container>
+            <Row className="border-bottom border-3 border-dark">
+                <Col>
+                    <nav className="p-3 float-end"><FontAwesomeIcon icon={faBars} size="3x"/></nav>
+                </Col>
+            </Row>
             <Row>
                 <Col>
                     <Ratings/>
